@@ -1,27 +1,21 @@
-import PanvelSite from "../pageobjects/panvelSite";
+
+import MinhaConta from "../pageobjects/MinhaConta";
+const minhaConta = new MinhaConta
 
 
-const panvelSite = new PanvelSite
 
-Given("Acesso o site da panvel", () => {
-
-    panvelSite.acessarPanvel()
+And("Clico em atualizar meus dados",()=>{
+    minhaConta.atualizarMeusDados()
 })
 
-And("Clico no icone para entrar", () => {
-    panvelSite.acessarLogin()
+And("Insiro as informações correspondentes",()=>{
+    minhaConta.atualizarTelefone()
 })
 
-And("Preencho as informações de Login", () => {
-    panvelSite.preencherLogin()
+And ("Então clico atualizar meus dados",()=>{
+    minhaConta.atualizarDadosGeralMinhaConta()
 })
-
-Then("Clico no botao de entrar", () => {
-    panvelSite.logarBotao()
-})
-
-Given("Logado acesso o menu minha conta", () => {
-    panvelSite.logarMinhaConta()
-
+Then ("Espero a mensagem de confirmação",()=>{
+    minhaConta.respostaDeAtualizacao()
 })
 
