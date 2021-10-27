@@ -21,6 +21,11 @@ class PanvelSite {
     logarBotao(){
         cy.get(panvelElements.botaoEntrarLogin()).click()
     }
+    logarMinhaConta(){
+       // cy.get(panvelElements.botaoMinhaConta()).invoke('show')
+       cy.visit('/panvel/meusDados.do')
+        
+    }
 }
 
 export default PanvelSite

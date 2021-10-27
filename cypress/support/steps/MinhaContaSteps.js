@@ -12,10 +12,16 @@ And("Clico no icone para entrar", () => {
     panvelSite.acessarLogin()
 })
 
-And("Preencho as informações de Login",()=>{
+And("Preencho as informações de Login", () => {
     panvelSite.preencherLogin()
 })
 
-Then("Clico no botao de entrar",()=>{
+Then("Clico no botao de entrar", () => {
     panvelSite.logarBotao()
 })
+
+Given("Logado acesso o menu minha conta", () => {
+    panvelSite.logarMinhaConta()
+
+})
+
