@@ -11,6 +11,4 @@ Given("Faço login no site da panvel", () => {
 
 Then("Clico no botao de entrar", () => {
     loginSteps.logarMinhaConta()
-   cy.wait(4000)
-
 })
