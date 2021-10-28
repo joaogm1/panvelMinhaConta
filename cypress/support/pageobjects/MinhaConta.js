@@ -8,21 +8,25 @@ class MinhaConta {
    
 
     atualizarMeusDados() {
-        cy.wait(3000)
         cy.get(elementsMinhaConta.botaoAtualizarMeusDados()).click()
     }
     atualizarTelefone() {
+        cy.get(elementsMinhaConta.atualizarMeuTelefone()).clear()
         cy.get(elementsMinhaConta.atualizarMeuTelefone()).type('985743758')
     }
 
     atualizarDadosGeralMinhaConta() {
-        cy.wait(3000)
         cy.get(elementsMinhaConta.atualizarDadosGeral()).click()
     }
 
     respostaDeAtualizacao(){
        cy.get(elementsMinhaConta.respostaAtualizarDados()).should('have.text','YESSS! Suas informações foram atualizadas com sucesso.')
     }
+
+    adicionarEnderecoMinhaConta(){
+        cy.get(elementsMinhaConta.aidicionarEndereco()).click()
+    }
+    
 }
 
 export default MinhaConta

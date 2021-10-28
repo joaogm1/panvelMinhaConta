@@ -4,7 +4,7 @@ const minhaConta = new MinhaConta
 
 
 
-And("Clico em atualizar meus dados",()=>{
+Given("Clico em atualizar meus dados",()=>{
     minhaConta.atualizarMeusDados()
 })
 
@@ -17,5 +17,9 @@ And ("Então clico atualizar meus dados",()=>{
 })
 Then ("Espero a mensagem de confirmação",()=>{
     minhaConta.respostaDeAtualizacao()
+})
+
+And("Clico em adicionar endereço",()=>{
+    minhaConta.adicionarEnderecoMinhaConta()
 })
 
