@@ -8,12 +8,9 @@ Given("Clico em atualizar meus dados",()=>{
 })
 
 And("Insiro as informações correspondentes aos dados",()=>{
-    meusDados.atualizarTelefone()
+    meusDados.atualzarDados()
 })
 
-And ("Então clico atualizar meus dados",()=>{
-    meusDados.atualizarDadosGeralMinhaConta()
-})
 Then ("Espero a mensagem de confirmação",()=>{
     meusDados.respostaDeAtualizacao()
 })

@@ -2,17 +2,17 @@ import EnderecoElements from "../elements/EnderecoElements";
 import ElementsPaginaConfirmacao from "../elements/ElementsPaginaConfirmacao";
 import waitLoader from "../util/waitLoader";
 
-const enderecoElements= new EnderecoElements
+const enderecoElements = new EnderecoElements
 const elementsPaginaConfirmacao = new ElementsPaginaConfirmacao
 
 
-class MeuEndereco{
-    paginaMeuEndereco(){
+class MeuEndereco {
+    paginaMeuEndereco() {
         cy.visit("https://www.panvel.com/panvel/adicionarEndereco.do")
         waitLoader()
     }
 
-    atualizarEndereco(){
+    atualizarEndereco() {
 
         cy.get(enderecoElements.barraDeCPF()).clear().type('91750200')
         cy.get(enderecoElements.barraDeComplemento()).clear().type('Bloco x')
@@ -22,11 +22,11 @@ class MeuEndereco{
         cy.get(enderecoElements.botaoAdicionarEndereco()).click()
     }
 
-    respostaDeAtualizacao(){
-        cy.get(elementsPaginaConfirmacao.respostaAtualizarDados()).should('have.text','YESSS! Suas informações foram atualizadas com sucesso.')
-     }
-    
-    
+    respostaDeAtualizacao() {
+        cy.get(elementsPaginaConfirmacao.respostaAtualizarDados()).should('have.text', 'YESSS! Suas informações foram atualizadas com sucesso.')
+    }
+
+
 }
 
 export default MeuEndereco

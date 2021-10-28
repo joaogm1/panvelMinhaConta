@@ -1,7 +1,10 @@
 class ElementsMeusDados {
 
-    atualizarMeuTelefone = () => { return '#input-phone' }
-    atualizarDadosGeral = () => { return '#btn-next-step' }
+    barraMeuTelefone = () => { return '#input-phone' }
+    barraData = ()=>{return '#input-data-nascimento'}
+    barraSexo = ()=>{return ':nth-child(6) > .form-control > .form-control__select'}
+    barraCivil = ()=>{return ':nth-child(7) > .form-control > .form-control__select'}
+    botaoAtualizarDados = () => { return '#btn-next-step' }
 
 }
 

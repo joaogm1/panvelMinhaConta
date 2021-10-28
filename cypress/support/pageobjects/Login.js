@@ -4,7 +4,7 @@ import waitLoader from "../util/waitLoader";
 
 const loginElements = new LoginElements
 
-class Login{
+class Login {
 
     acessarPanvel() {
 

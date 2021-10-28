@@ -1,4 +1,4 @@
-class ElementsPaginaConfirmacao{
+class ElementsPaginaConfirmacao {
     respostaAtualizarDados = () => { return '.search-result--empty-text' }
 }
 
