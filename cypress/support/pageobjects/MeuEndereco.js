@@ -1,7 +1,10 @@
 import EnderecoElements from "../elements/EnderecoElements";
+import ElementsPaginaConfirmacao from "../elements/ElementsPaginaConfirmacao";
 import waitLoader from "../util/waitLoader";
 
 const enderecoElements= new EnderecoElements
+const elementsPaginaConfirmacao = new ElementsPaginaConfirmacao
+
 
 class MeuEndereco{
     paginaMeuEndereco(){
@@ -18,6 +21,10 @@ class MeuEndereco{
         cy.get(enderecoElements.barraDeReferencia()).clear().type('Ao lado de tal local')
         cy.get(enderecoElements.botaoAdicionarEndereco()).click()
     }
+
+    respostaDeAtualizacao(){
+        cy.get(elementsPaginaConfirmacao.respostaAtualizarDados()).should('have.text','YESSS! Suas informações foram atualizadas com sucesso.')
+     }
     
     
 }

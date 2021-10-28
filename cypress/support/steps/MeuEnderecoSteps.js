@@ -8,3 +8,7 @@ Given("Estou na página meu Endereço",()=>{
 And("Insiro as informações correspondentes",()=>{
     meuEndereco.atualizarEndereco()
 })
+
+Then ("Espero a mensagem de confirmação",()=>{
+    meuEndereco.respostaDeAtualizacao()
+})

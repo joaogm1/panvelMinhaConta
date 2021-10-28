@@ -8,3 +8,4 @@ Feature: Adicionar endereço
     Scenario: Alterar meu endereço 
         Given Estou na página meu Endereço
         And Insiro as informações correspondentes
+       Then Espero a mensagem de confirmação

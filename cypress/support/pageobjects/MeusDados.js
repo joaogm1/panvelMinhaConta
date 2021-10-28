@@ -1,7 +1,9 @@
 import ElementsMeusDados from "../elements/ElementsMeusDados";
+import ElementsPaginaConfirmacao from "../elements/ElementsPaginaConfirmacao";
 import waitLoader from "../util/waitLoader";
 
 const elementsMeusDados = new ElementsMeusDados
+const elementsPaginaConfirmacao = new ElementsPaginaConfirmacao
 
 class MeusDados{
     
@@ -20,7 +22,7 @@ class MeusDados{
     }
 
     respostaDeAtualizacao(){
-       cy.get(elementsMeusDados.respostaAtualizarDados()).should('have.text','YESSS! Suas informações foram atualizadas com sucesso.')
+       cy.get(elementsPaginaConfirmacao.respostaAtualizarDados()).should('have.text','YESSS! Suas informações foram atualizadas com sucesso.')
     }
 
 }

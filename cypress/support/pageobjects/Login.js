@@ -1,5 +1,6 @@
 /// <reference types="Cypress" />
 import LoginElements from "../elements/LoginElements";
+import waitLoader from "../util/waitLoader";
 
 const loginElements = new LoginElements
 
@@ -8,6 +9,7 @@ class Login{
     acessarPanvel() {
 
         cy.visit("https://www.panvel.com/panvel/login.do");
+        waitLoader()
     }
 
     acessarLogin() {
