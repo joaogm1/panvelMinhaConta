@@ -1,13 +1,16 @@
 import MeuEndereco from "../pageobjects/MeuEndereco";
+import MeusDados from "../pageobjects/MeusDados";
 
 const meuEndereco = new MeuEndereco
 
 Given("Estou na página meu Endereço",()=>{
     meuEndereco.paginaMeuEndereco()
 })
-And("Insiro as informações correspondentes",()=>{
-    meuEndereco.atualizarEndereco()
-})
+
+When(/^Insiro as informações correspondente ao "([^"]*)"$/, (dadosEndereco) => {
+    meuEndereco.atualizarEndereco(dadosEndereco)
+});
+
 
 Then ("Espero a mensagem de confirmação",()=>{
     meuEndereco.respostaDeAtualizacao()

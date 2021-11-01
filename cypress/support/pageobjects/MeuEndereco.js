@@ -4,7 +4,6 @@ import waitLoader from "../util/waitLoader";
 const enderecoElements = new EnderecoElements
 const elementsPaginaConfirmacao = new ElementsPaginaConfirmacao
 const endereco = require('../../Dados/dados.json')
-dados.json
 
 class MeuEndereco {
     paginaMeuEndereco() {
@@ -12,13 +11,15 @@ class MeuEndereco {
         waitLoader()
     }
 
-    atualizarEndereco() {
+    atualizarEndereco(meuEndereco) {
 
-        cy.get(enderecoElements.barraDeCPF()).clear().type('91750200')
-        cy.get(enderecoElements.barraDeComplemento()).clear().type('Bloco x')
-        cy.get(enderecoElements.barraDeIdentificacao()).clear().type('Apartamento')
-        cy.get(enderecoElements.barraDeNumero()).clear().type('338')
-        cy.get(enderecoElements.barraDeReferencia()).clear().type('Ao lado de tal local')
+        var dadosEndereco = endereco.filter( x=> x.scenario==meuEndereco)
+        var dados = dadosEndereco[0]
+        cy.get(enderecoElements.barraDeCPF()).clear().type(dados.dados.cep)
+        cy.get(enderecoElements.barraDeComplemento()).clear().type(dados.dados.complemeneto)
+        cy.get(enderecoElements.barraDeIdentificacao()).clear().type(dados.dados.identificacao)
+        cy.get(enderecoElements.barraDeNumero()).clear().type(dados.dados.numero)
+        cy.get(enderecoElements.barraDeReferencia()).clear().type(dados.dados.referencia)
         cy.get(enderecoElements.botaoAdicionarEndereco()).click()
     }
 

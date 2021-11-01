@@ -1,11 +1,32 @@
 [
     {
         "scenario": "ENDERECO_UM",
-        "data": {
+        "dados": {
             "cep": "92990-000",
             "identificacao": "predio",
             "numero": "865 ",
-            "referencia": "Bairro Industrial "
+            "referencia": "Bairro Industrial ",
+            "complemeneto": "eldorado"
+        }
+    },
+    {
+        "scenario": "ENDERECO_DOIS",
+        "dados": {
+            "cep": "91750200",
+            "identificacao": "Casa",
+            "numero": "1430 ",
+            "referencia": "Ao lado de tal local ",
+            "complemeneto": "Zona Sul"
+        }
+    },
+    {
+        "scenario": "ENDERECO_INVALIDO",
+        "dados": {
+            "cep": "",
+            "identificacao": "Casa",
+            "numero": "1430 ",
+            "referencia": "Ao lado de tal local ",
+            "complemeneto": "Zona Sul"
         }
     }
 ]

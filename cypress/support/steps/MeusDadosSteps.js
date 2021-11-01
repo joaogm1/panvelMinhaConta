@@ -7,10 +7,15 @@ Given("Clico em atualizar meus dados",()=>{
     meusDados.paginaMeusDados()
 })
 
-And("Insiro as informações correspondentes aos dados",()=>{
-    meusDados.atualzarDados()
-})
+
+When(/^Insiro as informações correspondentes aaaaa "([^"]*)"$/, (meuEndereco) => {
+	
+    meusDados.atualzarDados(meuEndereco)
+    
+});
+
 
 Then ("Espero a mensagem de confirmação",()=>{
     meusDados.respostaDeAtualizacao()
 })
+

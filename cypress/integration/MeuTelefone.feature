@@ -8,7 +8,11 @@ Background: Acessando a página minha conta
 
 
     
-    Scenario: Estou na pagina minha conta e quero alterar as informações de telefone
+    Scenario Outline: Estou na pagina minha conta e quero alterar as informações de telefone
         Given Clico em atualizar meus dados
-        And Insiro as informações correspondentes aos dados
+        When Insiro as informações correspondentes ao "<ENDERECO>"
         Then Espero a mensagem de confirmação
+        
+        Examples:
+        |ENDERECO   |
+        |ENDERECO_DOIS|
