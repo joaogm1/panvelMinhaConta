@@ -1,5 +1,4 @@
 import MeuEndereco from "../pageobjects/MeuEndereco";
-import MeusDados from "../pageobjects/MeusDados";
 
 const meuEndereco = new MeuEndereco
 
