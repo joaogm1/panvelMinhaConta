@@ -22,7 +22,7 @@
     {
         "scenario": "ENDERECO_INVALIDO",
         "dados": {
-            "cep": "",
+            "cep": "112",
             "identificacao": "Casa",
             "numero": "1430 ",
             "referencia": "Ao lado de tal local ",

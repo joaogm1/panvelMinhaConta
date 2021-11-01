@@ -4,6 +4,7 @@ Feature: Adicionar endereço
 
         Given Faço login no site da panvel
         Then Clico no botao de entrar
+        
 
     Scenario Outline: Alterar meu endereço
         Given Estou na página meu Endereço
@@ -11,6 +12,15 @@ Feature: Adicionar endereço
         Then Espero a mensagem de confirmação
 
         Examples:
-            | ENDERECO    |
-            | ENDERECO_UM |
-            | ENDERECO_DOIS|
+            | ENDERECO      |
+            | ENDERECO_UM   |
+            | ENDERECO_DOIS |
+
+    Scenario Outline: Adicionar endereço inváido
+        Given Estou na página meu Endereço
+        When Insiro as informações correspondente ao "<ENDERECO>"
+        Then Espero a mensagem de de erro
+
+        Examples:
+            | ENDERECO          |
+            | ENDERECO_INVALIDO |

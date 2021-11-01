@@ -26,6 +26,10 @@ class MeuEndereco {
     respostaDeAtualizacao() {
         cy.get(elementsPaginaConfirmacao.respostaAtualizarDados()).should('have.text', 'YESSS! Suas informações foram atualizadas com sucesso.')
     }
+    
+    respostaDeErro(){
+        cy.get(enderecoElements.barraDeCPF()).should('have.css','border','1.5px solid rgb(219, 83, 83)')
+    }
 
 
 }
