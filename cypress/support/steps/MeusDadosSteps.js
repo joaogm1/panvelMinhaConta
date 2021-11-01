@@ -14,7 +14,7 @@ When(/^Insiro as informações correspondentes aos "([^"]*)"$/, (dadosPessoais) 
 });
 
 
-Then ("Espero a mensagem de confirmação",()=>{
+Then (/^Espero a mensagem de confirmação$/",()=>{
     meusDados.respostaDeAtualizacao()
 })
 

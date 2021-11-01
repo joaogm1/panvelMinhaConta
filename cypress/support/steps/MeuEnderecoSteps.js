@@ -3,7 +3,7 @@ import MeusDados from "../pageobjects/MeusDados";
 
 const meuEndereco = new MeuEndereco
 
-Given("Estou na página meu Endereço",()=>{
+Given(/^Estou na página meu Endereço$/,()=>{
     meuEndereco.paginaMeuEndereco()
 })
 
@@ -12,7 +12,7 @@ When(/^Insiro as informações correspondente ao "([^"]*)"$/, (dadosEndereco) =>
 });
 
 
-Then ("Espero a mensagem de confirmação",()=>{
+Then (/^Espero a mensagem de confirmação$/,()=>{
     meuEndereco.respostaDeAtualizacao()
 })
 
