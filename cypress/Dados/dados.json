@@ -37,6 +37,15 @@
             "sexo": "M",
             "civil": "1"
         }
+    },
+    {
+        "scenario": "DADOS_INVALIDOS",
+        "dados": {
+            "telefone": "112",
+            "data": "23121996",
+            "sexo": "M",
+            "civil": "1"
+        }
     }
 ]
 

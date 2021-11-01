@@ -5,6 +5,7 @@ class ElementsMeusDados {
     barraSexo = ()=>{return ':nth-child(6) > .form-control > .form-control__select'}
     barraCivil = ()=>{return ':nth-child(7) > .form-control > .form-control__select'}
     botaoAtualizarDados = () => { return '#btn-next-step' }
+    mensagemErro = ()=> {return '.message__box-content'}
 
 }
 

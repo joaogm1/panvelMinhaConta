@@ -27,6 +27,10 @@ class MeusDados {
         cy.get(elementsPaginaConfirmacao.respostaAtualizarDados()).should('have.text', 'YESSS! Suas informações foram atualizadas com sucesso.')
     }
 
+    respostaDeErro(){
+        cy.get(elementsMeusDados.mensagemErro()).should('have.text','Erro ao atualizar cadastro do cliente')
+    }
+
 }
 
 export default MeusDados

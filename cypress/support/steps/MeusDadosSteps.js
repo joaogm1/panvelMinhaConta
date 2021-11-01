@@ -18,3 +18,8 @@ Then ("Espero a mensagem de confirmação",()=>{
     meusDados.respostaDeAtualizacao()
 })
 
+
+Then(/^Espero a mensagem de erro$/, () => {
+	meusDados.respostaDeErro()
+});
+
