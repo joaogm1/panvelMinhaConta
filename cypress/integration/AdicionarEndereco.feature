@@ -14,7 +14,7 @@ Feature: Adicionar endereço
         Examples:
             | ENDERECO      |
             | ENDERECO_UM   |
-            | ENDERECO_DOIS |
+            #| ENDERECO_DOIS |
 
     Scenario Outline: Adicionar endereço inváido
         Given Estou na página meu Endereço

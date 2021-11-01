@@ -10,9 +10,9 @@ Background: Acessando a página minha conta
     
     Scenario Outline: Estou na pagina minha conta e quero alterar as informações de telefone
         Given Clico em atualizar meus dados
-        When Insiro as informações correspondentes ao "<ENDERECO>"
+        When Insiro as informações correspondentes aos "<MEUS_DADOS>"
         Then Espero a mensagem de confirmação
         
         Examples:
-        |ENDERECO   |
-        |ENDERECO_DOIS|
+        |MEUS_DADOS   |
+        |DADOS_PESSOAIS|

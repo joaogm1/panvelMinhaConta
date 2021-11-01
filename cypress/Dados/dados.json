@@ -28,6 +28,15 @@
             "referencia": "Ao lado de tal local ",
             "complemeneto": "Zona Sul"
         }
+    },
+    {
+        "scenario": "DADOS_PESSOAIS",
+        "dados": {
+            "telefone": "985743758",
+            "data": "23121996",
+            "sexo": "M",
+            "civil": "1"
+        }
     }
 ]
 

@@ -1,6 +1,7 @@
 import ElementsMeusDados from "../elements/ElementsMeusDados";
 import ElementsPaginaConfirmacao from "../elements/ElementsPaginaConfirmacao";
 import waitLoader from "../util/waitLoader";
+const meusDados = require('../../Dados/dados.json')
 
 const elementsMeusDados = new ElementsMeusDados
 const elementsPaginaConfirmacao = new ElementsPaginaConfirmacao
@@ -12,12 +13,13 @@ class MeusDados {
         cy.visit("https://www.panvel.com/panvel/editarMeusDados.do")
         waitLoader()
     }
-    atualzarDados() {
-
-        cy.get(elementsMeusDados.barraData()).clear().type('23111994')
-        cy.get(elementsMeusDados.barraMeuTelefone()).clear().type('985743758')
-        cy.get(elementsMeusDados.barraSexo()).select('M')
-        cy.get(elementsMeusDados.barraCivil()).select('3')
+    atualzarDados(dados) {
+        var dadosPagina = meusDados.filter( x=> x.scenario==dados)
+        var dadosInput = dadosPagina[0]
+        cy.get(elementsMeusDados.barraData()).clear().type(dadosInput.dados.data)
+        cy.get(elementsMeusDados.barraMeuTelefone()).clear().type(dadosInput.dados.telefone)
+        cy.get(elementsMeusDados.barraSexo()).select(dadosInput.dados.sexo)
+        cy.get(elementsMeusDados.barraCivil()).select(dadosInput.dados.civil)
         cy.get(elementsMeusDados.botaoAtualizarDados()).click()
     }
 

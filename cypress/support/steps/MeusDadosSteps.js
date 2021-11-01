@@ -8,10 +8,9 @@ Given("Clico em atualizar meus dados",()=>{
 })
 
 
-When(/^Insiro as informações correspondentes aaaaa "([^"]*)"$/, (meuEndereco) => {
-	
-    meusDados.atualzarDados(meuEndereco)
-    
+
+When(/^Insiro as informações correspondentes aos "([^"]*)"$/, (dadosPessoais) => {
+        meusDados.atualzarDados(dadosPessoais)
 });
 
 
