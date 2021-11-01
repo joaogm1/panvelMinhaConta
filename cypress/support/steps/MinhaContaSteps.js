@@ -5,7 +5,7 @@ const minhaConta = new MinhaConta
 
 
 
-And("Clico em adicionar endereço",()=>{
-    minhaConta.adicionarEnderecoMinhaConta()
+Given("Verifico as informações do site",()=>{
+    minhaConta.verificarDadosMinhaConta()
 })
 

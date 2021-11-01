@@ -1,0 +1,13 @@
+[
+    {
+        "scenario": "ENDERECO_UM",
+        "data": {
+            "cep": "92990-000",
+            "identificacao": "predio",
+            "numero": "865 ",
+            "referencia": "Bairro Industrial "
+        }
+    }
+]
+
+

@@ -1,10 +1,10 @@
 import EnderecoElements from "../elements/EnderecoElements";
 import ElementsPaginaConfirmacao from "../elements/ElementsPaginaConfirmacao";
 import waitLoader from "../util/waitLoader";
-
 const enderecoElements = new EnderecoElements
 const elementsPaginaConfirmacao = new ElementsPaginaConfirmacao
-
+const endereco = require('../../Dados/dados.json')
+dados.json
 
 class MeuEndereco {
     paginaMeuEndereco() {

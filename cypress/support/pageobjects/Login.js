@@ -20,6 +20,7 @@ class Login {
 
         cy.get(loginElements.barraCpf()).type('86369113034')
         cy.get(loginElements.barraSenha()).type('Teste123')
+        waitLoader()
     }
     logarBotao() {
         cy.get(loginElements.botaoEntrarLogin()).click()
@@ -27,6 +28,7 @@ class Login {
     logarMinhaConta() {
         // cy.get(panvelElements.botaoMinhaConta()).invoke('show')
         cy.visit('/panvel/meusDados.do')
+        
     }
 
 }
