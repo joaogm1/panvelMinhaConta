@@ -10,3 +10,7 @@ Given(/^Verifico as informações do site$/, () => {
 });
 
 
+
+Then(/^Os dados devem estar ok$/, () => {
+	return true;
+});

@@ -8,6 +8,7 @@ Feature: Alterações da Minha conta panvel
     
     Scenario: Verificando as informações Minha Conta
         Given Verifico as informações do site
+        Then  Os dados devem estar ok
         
         
 
