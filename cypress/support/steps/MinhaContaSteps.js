@@ -5,7 +5,8 @@ const minhaConta = new MinhaConta
 
 
 
-Given("Verifico as informações do site",()=>{
-    minhaConta.verificarDadosMinhaConta()
-})
+Given(/^Verifico as informações do site$/, () => {
+        minhaConta.verificarDadosMinhaConta()
+});
+
 
