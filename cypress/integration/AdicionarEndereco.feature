@@ -3,7 +3,7 @@ Feature: Adicionar endereço
     Background: Fazendo login na página da panvel
 
         Given Faço login no site da panvel
-        Then Clico no botao de entrar
+        Then Sou direcionado para a pagina da panvel
         
 
     Scenario Outline: Adicionar um endereço

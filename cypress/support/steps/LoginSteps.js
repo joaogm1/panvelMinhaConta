@@ -9,6 +9,6 @@ Given("Faço login no site da panvel", () => {
     loginSteps.logarBotao()
 })
 
-Then("Clico no botao de entrar", () => {
-    loginSteps.logarMinhaConta()
+Then("Sou direcionado para a pagina da panvel", () => {
+    loginSteps.confirmarUrl()
 })

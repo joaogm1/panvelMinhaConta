@@ -7,10 +7,6 @@ const elementsMinhaConta = new ElementsMinhaConta
 
 class MinhaConta {
 
-    verificarMinhaConta() {
-        cy.log("verificando")
-    }
-
     verificarDadosMinhaConta() {
         cy.get(elementsMinhaConta.cardEndereco()).should('include.text', 'ESTR: 15, 865, eldorado, PARQUE GUAIBA, ELDORADO DO SUL, RS')
         cy.get(elementsMinhaConta.cardEndereco()).should('include.text', 'R: ATILIO SUPERTTI, 1430, Zona Sul, VILA NOVA, PORTO ALEGRE, RS')

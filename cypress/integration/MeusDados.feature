@@ -4,7 +4,7 @@ Feature: Alterar Dados
 Background: Acessando a página minha conta 
 
         Given Faço login no site da panvel
-        Then Clico no botao de entrar
+        Then Sou direcionado para a pagina da panvel
 
 
     Scenario Outline: Estou na pagina minha conta e quero alterar meus dados

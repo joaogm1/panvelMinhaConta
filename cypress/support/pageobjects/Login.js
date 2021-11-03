@@ -25,9 +25,9 @@ class Login {
     logarBotao() {
         cy.get(loginElements.botaoEntrarLogin()).click()
     }
-    logarMinhaConta() {
-        // cy.get(panvelElements.botaoMinhaConta()).invoke('show')
-        cy.visit('/panvel/meusDados.do')
+    confirmarUrl() {
+        
+        cy.url().should('be.equal','https://www.panvel.com/')
         
     }
 
