@@ -20,7 +20,7 @@ Background: Acessando a página minha conta
     Scenario Outline: Estou na pagina minha conta e quero verificar a inserção de dados invalido
         Given Clico em atualizar meus dados
         When Insiro as informações correspondentes aos "<MEUS_DADOS>"
-        Then Espero a mensagem de erro
+        Then Espero a mensagem de erro dos dados
         
         Examples:
         |MEUS_DADOS   |
