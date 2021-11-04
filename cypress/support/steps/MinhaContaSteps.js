@@ -1,31 +1,31 @@
-import MeuEndereco from "../pageobjects/MeuEndereco";
+import MinhaConta from "../pageobjects/MinhaConta";
 
-const meuEndereco = new MeuEndereco
+const minhaConta = new MinhaConta
 
 Given(/^Estou na página meu Endereço$/, () => {
-    meuEndereco.paginaMeuEndereco()
+    minhaConta.paginaMeuEndereco()
 })
 
 When(/^Insiro as informações correspondente ao "([^"]*)"$/, (dadosEndereco) => {
-    meuEndereco.atualizarEndereco(dadosEndereco)
+    minhaConta.atualizarEndereco(dadosEndereco)
 });
 
 
 Then(/^Espero a mensagem de confirmação$/, () => {
-    meuEndereco.respostaDeAtualizacao()
+    minhaConta.respostaDeAtualizacao()
 })
 
 
 Then(/^Espero a mensagem de de erro$/, () => {
-    meuEndereco.respostaDeErro()
+    minhaConta.respostaDeErro()
 });
 
 // steps login
 Given(/^Faço login no site da panvel$/, () => {
 
-    meuEndereco.acessarPanvel()
-    meuEndereco.preencherLogin()
-    meuEndereco.logarBotao()
+    minhaConta.acessarPanvel()
+    minhaConta.preencherLogin()
+    minhaConta.logarBotao()
 })
 
 Then(/^Sou direcionado para a pagina da panvel$/, () => {
@@ -35,7 +35,7 @@ Then(/^Sou direcionado para a pagina da panvel$/, () => {
 
 //steps para verificar dados da minha conta
 Given(/^Verifico as informações do site$/, () => {
-    meuEndereco.verificarDadosMinhaConta()
+    minhaConta.verificarDadosMinhaConta()
 });
 
 
@@ -47,23 +47,23 @@ Then(/^Os dados devem estar ok$/, () => {
 
 // steps para atualização dos dados
 Given(/^Clico em atualizar meus dados$/, () => {
-    meuEndereco.paginaMeusDados()
+    minhaConta.paginaMeusDados()
 })
 
 
 
 Then(/^Espero a mensagem de confirmação dos dados$/, () => {
-    meuEndereco.respostaDeAtualizacao()
+    minhaConta.respostaDeAtualizacao()
 })
 
 
 Then(/^Espero a mensagem de erro dos dados$/, () => {
-    meuEndereco.respostaDeErroDados()
+    minhaConta.respostaDeErroDados()
 });
 
 
 When(/^Insiro as informações correspondentes dos "([^"]*)"$/, (dadosPessoais) => {
-	meuEndereco.atualzarDados(dadosPessoais)
+	minhaConta.atualzarDados(dadosPessoais)
 });
 
 // final das steps dos meus dados

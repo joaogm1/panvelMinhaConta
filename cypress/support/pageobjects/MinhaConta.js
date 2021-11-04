@@ -5,6 +5,7 @@ import LoginElements from "../elements/LoginElements";
 import ElementsMinhaConta from "../elements/ElementsMinhaConta";
 import modalBlackFriday from "../util/modalBlackFriday";
 import ElementsMeusDados from "../elements/ElementsMeusDados";
+import modalTermos from "../util/modalTermos";
 
 
 
@@ -16,7 +17,7 @@ const elementsMeusDados = new ElementsMeusDados
 const endereco = require('../../Dados/dados.json')
 const meusDados = require('../../Dados/dados.json')
 
-class MeuEndereco {
+class MinhaConta {
     paginaMeuEndereco() {
         cy.visit("https://www.panvel.com/panvel/adicionarEndereco.do")
         waitLoader()
@@ -59,6 +60,7 @@ class MeuEndereco {
     logarBotao() {
         cy.get(loginElements.botaoEntrarLogin()).click()
         modalBlackFriday()
+        modalTermos()
     }
     confirmarUrl() {
 
@@ -105,4 +107,4 @@ class MeuEndereco {
     // final das funções de atualização de dados
 }
 
-export default MeuEndereco
+export default MinhaConta
