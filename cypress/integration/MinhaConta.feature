@@ -2,8 +2,7 @@ Feature: Verificações na Página Minha Conta
 
     Background: Fazendo login na página da panvel
 
-        Given Faço login no site da panvel
-        Then Sou direcionado para a pagina da panvel
+        Given Estou na página minha conta
 
     Scenario Outline: Adicionar um endereço
         Given Estou na página meu Endereço

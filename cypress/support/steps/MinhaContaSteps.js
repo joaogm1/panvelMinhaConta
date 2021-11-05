@@ -20,16 +20,12 @@ Then(/^Espero a mensagem de de erro$/, () => {
     minhaConta.respostaDeErro()
 });
 
-// steps login
-Given(/^Faço login no site da panvel$/, () => {
+// steps login (minha conta)
+Given(/^Estou na página minha conta$/, () => {
 
     minhaConta.acessarPanvel()
     minhaConta.preencherLogin()
     minhaConta.logarBotao()
-})
-
-Then(/^Sou direcionado para a pagina da panvel$/, () => {
-    console.log('foi')
 })
 // end steps login
 
