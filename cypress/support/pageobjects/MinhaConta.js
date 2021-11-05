@@ -72,8 +72,7 @@ class MinhaConta {
     // funcoes para verificacao minha conta
     verificarDadosMinhaConta() {
         cy.visit('https://www.panvel.com/panvel/meusDados.do')
-        // cy.get(elementsMinhaConta.cardEndereco()).should('include.text', 'ESTR: 15, 865, eldorado, PARQUE GUAIBA, ELDORADO DO SUL, RS')
-        //cy.get(elementsMinhaConta.cardEndereco()).should('include.text', 'R: ATILIO SUPERTTI, 1430, Zona Sul, VILA NOVA, PORTO ALEGRE, RS')
+        cy.get(elementsMinhaConta.cardEndereco()).should('include.text', 'ESTR: 15, 865, eldorado, PARQUE GUAIBA, ELDORADO DO SUL, RS')
         cy.get(elementsMinhaConta.cardTelefone()).should('include.text', '985743758')
         cy.get(elementsMinhaConta.cardNome()).should('include.text', 'JOAO GUILHERME GROSS MARTINS')
         waitLoader()
