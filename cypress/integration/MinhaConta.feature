@@ -34,7 +34,7 @@ Feature: Verificações na Página Minha Conta
             | DADOS_PESSOAIS |
 
 
-    Scenario Outline: Estou na pagina minha conta e quero verificar a inserção de dados invalido
+    Scenario Outline: Estou na pagina minha conta e quero verificar a inserção de dados invalidos
         Given Clico em atualizar meus dados
         When Insiro as informações correspondentes dos "<MEUS_DADOS>"
         Then Espero a mensagem de erro dos dados
